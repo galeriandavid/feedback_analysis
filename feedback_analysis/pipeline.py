@@ -10,11 +10,11 @@ import os
 file_path = os.getcwd()
 print(file_path)
 
-class FeedbackAnalisys:
+class FeedbackAnalysis:
     def __init__(self, 
                  sentiment_model_name='en-sentiment',
                  embedding_model_name='sentence-transformers/paraphrase-mpnet-base-v2',
-                 cluster_model_path = 'feedback_analisys/knn_model.pkl'):
+                 cluster_model_path = 'feedback_analysis/knn_model.pkl'):
         self.sentiment_model = flair.models.TextClassifier.load(sentiment_model_name)
         self.embedding_model = SentenceTransformer(embedding_model_name)
         self.cluster_model = self.load_cluster_model(cluster_model_path)

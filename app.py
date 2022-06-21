@@ -1,13 +1,13 @@
 import streamlit as st
-from feedback_analisys import FeedbackAnalisys
+from feedback_analysis import FeedbackAnalysis
 
 @st.cache(allow_output_mutation=True)
 def init_analyser():
-    return FeedbackAnalisys()
+    return FeedbackAnalysis()
 
 analyser = init_analyser()
 
-st.title('Feedback analisys')
+st.title('Feedback analysis')
 text = st.text_input('Enter your feedback')
 
 if st.button('Submit'):
